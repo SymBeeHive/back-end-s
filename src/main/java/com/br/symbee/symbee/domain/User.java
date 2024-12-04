@@ -1,6 +1,5 @@
 package com.br.symbee.symbee.domain;
 
-
 import com.br.symbee.symbee.entities.UserEntity;
 import lombok.Data;
 
