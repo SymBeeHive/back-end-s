@@ -34,4 +34,14 @@ public class UserServiceImpl implements UserService {
 
         userRepository.save(userEntity);
     }
+
+    @Override
+    public String login(String email, String password) throws Exception {
+        UserEntity userEntity = userRepository.findByEmail(email);
+
+        if(userEntity == null || !userEntity.getPassword().equals(password)) {
+            throw new Exception("E-mail ou senha inválido.");
+        }
+        return userEntity.getEmail();
+    }
 }

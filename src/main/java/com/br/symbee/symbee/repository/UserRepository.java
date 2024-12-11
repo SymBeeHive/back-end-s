@@ -10,4 +10,6 @@ import java.util.List;
 public interface UserRepository extends CrudRepository<UserEntity, Long> {
     @Override
     List<UserEntity> findAll();
+
+    UserEntity findByEmail(String email);
 }
